@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>两种方法让固定延时&quot;动起来&quot; | liwinking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;#x56E0;&amp;#x4E3A;&amp;#x5927;&amp;#x8303;&amp;#x56F4;&amp;#x5EF6;&amp;#x65F6;&amp;#x5BF9;&amp;#x5668;&amp;#x6750;&amp;#x4EE5;&amp;#x53CA;&amp;#x4EBA;&amp;#x529B;&amp;#x7684;&amp;#x8981;&amp;#x6C42;&amp;#xFF0C;&amp;#x6709;&amp;#x65F6;&amp;#x5019;&amp;#x62CD;&amp;#x6444;&amp;#x79FB;&amp;#x52A8;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="两种方法让固定延时"动起来"">
+<meta property="og:url" content="http://yoursite.com/2016/05/07/2016-05-07-两种方法让固定延时动起来/index.html">
+<meta property="og:site_name" content="liwinking">
+<meta property="og:description" content="&amp;#x56E0;&amp;#x4E3A;&amp;#x5927;&amp;#x8303;&amp;#x56F4;&amp;#x5EF6;&amp;#x65F6;&amp;#x5BF9;&amp;#x5668;&amp;#x6750;&amp;#x4EE5;&amp;#x53CA;&amp;#x4EBA;&amp;#x529B;&amp;#x7684;&amp;#x8981;&amp;#x6C42;&amp;#xFF0C;&amp;#x6709;&amp;#x65F6;&amp;#x5019;&amp;#x62CD;&amp;#x6444;&amp;#x79FB;&amp;#x52A8;">
+<meta property="og:image" content="https://liwinking.github.io/img/201605070/1.png">
+<meta property="og:image" content="https://liwinking.github.io/img/201605070/2.png">
+<meta property="og:image" content="https://liwinking.github.io/img/201605070/3.png">
+<meta property="og:image" content="https://liwinking.github.io/img/201605070/4.png">
+<meta property="og:image" content="https://liwinking.github.io/img/201605070/5.png">
+<meta property="og:image" content="https://liwinking.github.io/img/201605070/6.png">
+<meta property="og:image" content="https://liwinking.github.io/img/201605070/7.png">
+<meta property="og:image" content="https://liwinking.github.io/img/201605070/8.png">
+<meta property="og:image" content="https://liwinking.github.io/img/201605070/fd.gif">
+<meta property="og:image" content="https://liwinking.github.io/img/201605070/9.png">
+<meta property="og:image" content="https://liwinking.github.io/img/201605070/10.png">
+<meta property="og:image" content="https://liwinking.github.io/img/201605070/py.gif">
+<meta property="og:updated_time" content="2016-05-07T04:06:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="两种方法让固定延时"动起来"">
+<meta name="twitter:description" content="&amp;#x56E0;&amp;#x4E3A;&amp;#x5927;&amp;#x8303;&amp;#x56F4;&amp;#x5EF6;&amp;#x65F6;&amp;#x5BF9;&amp;#x5668;&amp;#x6750;&amp;#x4EE5;&amp;#x53CA;&amp;#x4EBA;&amp;#x529B;&amp;#x7684;&amp;#x8981;&amp;#x6C42;&amp;#xFF0C;&amp;#x6709;&amp;#x65F6;&amp;#x5019;&amp;#x62CD;&amp;#x6444;&amp;#x79FB;&amp;#x52A8;">
+<meta name="twitter:image" content="https://liwinking.github.io/img/201605070/1.png">
+  
+    <link rel="alternative" href="/atom.xml" title="liwinking" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/touxiang.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/touxiang.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">liwink</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>Тэги</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>О сайте</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/1768602700/home?wvr=5&c=spr_web_sq_kings_weibo_t001" title="weibo">weibo</a>
+					        
+								<a class="mail" target="_blank" href="#" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">liwink</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/touxiang.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">liwink</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/1768602700/home?wvr=5&c=spr_web_sq_kings_weibo_t001" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="#" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-2016-05-07-两种方法让固定延时动起来" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/07/2016-05-07-两种方法让固定延时动起来/" class="article-date">
+  	<time datetime="2016-05-07T03:51:07.000Z" itemprop="datePublished">2016-05-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      两种方法让固定延时&quot;动起来&quot;
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&#x56E0;&#x4E3A;&#x5927;&#x8303;&#x56F4;&#x5EF6;&#x65F6;&#x5BF9;&#x5668;&#x6750;&#x4EE5;&#x53CA;&#x4EBA;&#x529B;&#x7684;&#x8981;&#x6C42;&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x62CD;&#x6444;&#x79FB;&#x52A8;&#x5EF6;&#x65F6;&#x5BF9;&#x6210;&#x672C;&#x8981;&#x6C42;&#x8F83;&#x9AD8;&#xFF0C;&#x4F46;&#x662F;&#x62CD;&#x6444;&#x56FA;&#x5B9A;&#x7684;&#x5EF6;&#x65F6;&#x89C6;&#x9891;&#x53C8;&#x592A;&#x5E73;&#x6DE1;&#xFF0C;&#x753B;&#x9762;&#x4E0D;&#x80FD;&#x5E26;&#x6765;&#x66F4;&#x5927;&#x7684;&#x9707;&#x64BC;&#x611F;&#xFF0C;&#x6B64;&#x65F6;&#x9700;&#x8981;&#x5BF9;&#x56FA;&#x5B9A;&#x62CD;&#x6444;&#x7684;&#x5EF6;&#x65F6;&#x89C6;&#x9891;&#x8FDB;&#x884C;&#x4FEE;&#x9970;&#x7F16;&#x8F91;&#xFF0C;&#x4EE5;&#x8FBE;&#x5230;&#x8BA9;&#x5B83;&#x201D;&#x52A8;&#x8D77;&#x6765;&#x201D;&#x7684;&#x611F;&#x89C9;</p>
+<hr>
+<h2>1.&#x5BFC;&#x5165;&#x7D20;&#x6750;</h2>
+
+<hr>
+<p>&#x9996;&#x5148;&#x8981;&#x5BFC;&#x5165;&#x6211;&#x4EEC;&#x62CD;&#x6444;&#x7684;&#x7D20;&#x6750;&#xFF0C;&#x6253;&#x5F00;PR&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#xFF0C;&#x5728;&#x9879;&#x76EE;&#x7A97;&#x53E3;&#x70B9;&#x51FB;&#x65B0;&#x5EFA;&#x5E8F;&#x5217;</p>
+<center><img src="https://liwinking.github.io/img/201605070/1.png" alt=""></center><br>&#x9009;&#x62E9;HDV1080p30&#xFF0C;&#x70B9;&#x51FB;&#x786E;&#x8BA4;<br><center><img src="https://liwinking.github.io/img/201605070/2.png" alt=""></center><br>&#x5BFC;&#x5165;&#x62CD;&#x6444;&#x7684;&#x5EF6;&#x65F6;&#x89C6;&#x9891;<br><center><img src="https://liwinking.github.io/img/201605070/3.png" alt=""></center><br>&#x5C06;&#x5BFC;&#x5165;&#x7684;&#x89C6;&#x9891;&#x62D6;&#x52A8;&#x5230;&#x65F6;&#x95F4;&#x8F74;&#x4E0A;<br><center><img src="https://liwinking.github.io/img/201605070/4.png" alt=""></center>
+
+<hr>
+<h2>2.&#x6DFB;&#x52A0;&#x7F29;&#x653E;&#x6548;&#x679C;</h2>
+
+<hr>
+<p>&#x5728;&#x6548;&#x679C;&#x63A7;&#x4EF6;&#x4E2D;&#x9009;&#x62E9;&#x8FD0;&#x52A8;&#xFF0C;&#x6253;&#x5F00;&#x7F29;&#x653E;</p>
+<center><img src="https://liwinking.github.io/img/201605070/5.png" alt=""></center><br>&#x62D6;&#x52A8;&#x53F3;&#x8FB9;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x8C03;&#x8282;&#x9700;&#x8981;&#x7F29;&#x653E;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x70B9;&#x51FB;&#x7F29;&#x653E;&#x524D;&#x9762;&#x7684;&#x6309;&#x94AE;&#xFF0C;&#x5207;&#x6362;&#x52A8;&#x753B;&#xFF0C;&#x8FD9;&#x65F6;&#x5C31;&#x5728;&#x8BBE;&#x5B9A;&#x597D;&#x7684;&#x4F4D;&#x7F6E;&#x63D2;&#x5165;&#x4E86;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x5E27;<br><center><img src="https://liwinking.github.io/img/201605070/6.png" alt=""></center><br>&#x73B0;&#x5728;&#x8C03;&#x8282;&#x7F29;&#x653E;&#x6BD4;&#x4F8B;&#xFF0C;&#x8FD9;&#x91CC;&#x8C03;&#x8282;&#x5230;150%&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x653E;&#x5927;&#x663E;&#x793A;&#x6BD4;&#x4F8B;<br><center><img src="https://liwinking.github.io/img/201605070/7.png" alt=""></center><br>&#x7136;&#x540E;&#x5C06;&#x6307;&#x9488;&#x62D6;&#x52A8;&#x5230;&#x7B2C;&#x4E00;&#x5E27;&#x70B9;&#x51FB;&#x63D2;&#x5165;&#x5173;&#x952E;&#x5E27;&#xFF0C;&#x8BBE;&#x7F6E;&#x7F29;&#x653E;&#x6BD4;&#x4F8B;&#x4E3A;100%<br><center><img src="https://liwinking.github.io/img/201605070/8.png" alt=""></center><br>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x89C6;&#x9891;&#x4ECE;&#x5934;&#x64AD;&#x653E;&#x5230;&#x540E;&#x9762;&#x63D2;&#x5165;&#x7684;&#x90A3;&#x4E2A;&#x5E27;&#x7684;&#x8FC7;&#x7A0B;&#x4F1A;&#x6162;&#x6162;&#x653E;&#x5927;&#x663E;&#x793A;&#x6BD4;&#x4F8B;&#xFF0C;&#x8FBE;&#x5230;&#x8BA9;&#x56FA;&#x5B9A;&#x7684;&#x5EF6;&#x65F6;&#x753B;&#x9762;&#x52A8;&#x8D77;&#x6765;&#x7684;&#x611F;&#x89C9;<br><center><img src="https://liwinking.github.io/img/201605070/fd.gif" alt=""></center>
+
+<hr>
+<h2>3.&#x6DFB;&#x52A0;&#x5E73;&#x79FB;&#x6548;&#x679C;</h2>
+
+<hr>
+<p>&#x70B9;&#x51FB;&#x6548;&#x679C;&#x63A7;&#x4EF6;&#x4E2D;&#x4F4D;&#x7F6E;&#x524D;&#x9762;&#x7684;&#x6309;&#x94AE;&#xFF0C;&#x63D2;&#x5165;&#x5173;&#x952E;&#x5E27;</p>
+<center><img src="https://liwinking.github.io/img/201605070/9.png" alt=""></center><br>&#x540E;&#x9762;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x753B;&#x9762;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x62D6;&#x52A8;&#x53F3;&#x8FB9;&#x7684;&#x6307;&#x9488;&#x5230;&#x4F60;&#x9700;&#x8981;&#x79FB;&#x52A8;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x70B9;&#x51FB;&#x6DFB;&#x52A0;/&#x79FB;&#x9664;&#x5173;&#x952E;&#x5E27;<br><center><img src="https://liwinking.github.io/img/201605070/10.png" alt=""></center><br>&#x6B64;&#x65F6;&#x8C03;&#x6574;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5B9E;&#x73B0;&#x753B;&#x9762;&#x5DE6;&#x53F3;&#x5E73;&#x79FB;&#xFF0C;&#x8C03;&#x6574;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x5B9E;&#x73B0;&#x753B;&#x9762;&#x5782;&#x76F4;&#x79FB;&#x52A8;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x89C6;&#x9891;&#x4ECE;&#x5934;&#x64AD;&#x653E;&#x5230;&#x540E;&#x9762;&#x63D2;&#x5165;&#x7684;&#x90A3;&#x4E2A;&#x5E27;&#x7684;&#x8FC7;&#x7A0B;&#x4F1A;&#x6162;&#x6162;&#x79FB;&#x52A8;&#x663E;&#x793A;&#x753B;&#x9762;&#xFF0C;&#x8FBE;&#x5230;&#x8BA9;&#x56FA;&#x5B9A;&#x7684;&#x5EF6;&#x65F6;&#x753B;&#x9762;&#x52A8;&#x8D77;&#x6765;&#x7684;&#x611F;&#x89C9;<br><center><img src="https://liwinking.github.io/img/201605070/py.gif" alt=""></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/07/2016-05-07-延时摄影之——用手机拍摄延时摄影/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">延时摄影之——用手机拍摄延时摄影</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016-05-07-两种方法让固定延时动起来" data-title="两种方法让固定延时&quot;动起来&quot;" data-url="http://yoursite.com/2016/05/07/2016-05-07-两种方法让固定延时动起来/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 liwink
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
