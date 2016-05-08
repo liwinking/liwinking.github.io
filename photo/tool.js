@@ -9,7 +9,7 @@ fs.readdir(path, function (err, files) {
     let arr = [];
     (function iterator(index) {
         if (index == files.length) {
-            fs.writeFile(&quot;output.json&quot;, JSON.stringify(arr, null, &quot;\t&quot;));
+            fs.writeFile(&quot;output.json&quot;, JSON.stringify(arr,null,&quot;\t&quot;));
             return;
         }
 
