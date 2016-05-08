@@ -1,100 +1,46 @@
-define([], function(){
+define([], function () {
+    return {
+        page: 1,
+        offset: 20,
+        init: function () {
+            var that = this;
+            $.getJSON("/photo/output.json", function (data) {
+                that.render(that.page, data);
 
-	var Tips = (function(){
+                that.scroll(data);
+            });
+        },
 
-		var $tipBox = $(".tips-box");
+        render: function (page, data) {
+            var begin = (page - 1) * this.offset;
+            var end = page * this.offset;
+            if (begin >= data.length) return;
+            var html, li = "";
+            for (var i = begin; i < end && i < data.length; i++) {
+                li += '<li><div class="img-box">' +
+                    '<a class="img-bg" rel="example_group" href="https://github.com/liwinking/liwinking.github.io/tree/master/photo/' + data[i] + '?raw=true"></a>' +
+                    '<img lazy-src="https://github.com/liwinking/liwinking.github.io/tree/master/photo/' + data[i] + '?raw=true" />' +
+                    '</li>';
+            }
 
-		return {
-			show: function(){
-				$tipBox.removeClass("hide");
-			},
-			hide: function(){
-				$tipBox.addClass("hide");
-			},
-			init: function(){
-				
-			}
-		}
-	})();
+            $(".img-box-ul").append(li);
+            $(".img-box-ul").lazyload();
+            $("a[rel=example_group]").fancybox();
+        },
 
-	var resetTags = function(){
-		var tags = $(".tagcloud a");
-		tags.css({"font-size": "12px"});
-		for(var i=0,len=tags.length; i<len; i++){
-			var num = tags.eq(i).html().length % 5 +1;
-			tags[i].className = "";
-			tags.eq(i).addClass("color"+num);
-		}
-	}
+        scroll: function (data) {
+            var that = this;
+            $(window).scroll(function() {
+                var windowPageYOffset = window.pageYOffset;
+                var windowPageYOffsetAddHeight = windowPageYOffset + window.innerHeight;
+                var sensitivity = 0;
 
-	var slide = function(idx){
-		var $wrap = $(".switch-wrap");
-		$wrap.css({
-			"transform": "translate(-"+idx*100+"%, 0 )"
-		});
-		$(".icon-wrap").addClass("hide");
-		$(".icon-wrap").eq(idx).removeClass("hide");
-	}
+                var offsetTop = $(".instagram").offset().top + $(".instagram").height();
 
-	var bind = function(){
-		var switchBtn = $("#myonoffswitch");
-		var tagcloud = $(".second-part");
-		var navDiv = $(".first-part");
-		switchBtn.click(function(){
-			if(switchBtn.hasClass("clicked")){
-				switchBtn.removeClass("clicked");
-				tagcloud.removeClass("turn-left");
-				navDiv.removeClass("turn-left");
-			}else{
-				switchBtn.addClass("clicked");
-				tagcloud.addClass("turn-left");
-				navDiv.addClass("turn-left");
-				resetTags();
-			}
-		});
-
-		var timeout;
-		var isEnterBtn = false;
-		var isEnterTips = false;
-
-		$(".icon").bind("mouseenter", function(){
-			isEnterBtn = true;
-			Tips.show();
-		}).bind("mouseleave", function(){
-			isEnterBtn = false;
-			setTimeout(function(){
-				if(!isEnterTips){
-					Tips.hide();
-				}
-			}, 100);
-		});
-
-		$(".tips-box").bind("mouseenter", function(){
-			isEnterTips = true;
-			Tips.show();
-		}).bind("mouseleave", function(){
-			isEnterTips = false;
-			setTimeout(function(){
-				if(!isEnterBtn){
-					Tips.hide();
-				}
-			}, 100);
-		});
-
-		$(".tips-inner li").bind("click", function(){
-			var idx = $(this).index();
-			slide(idx);
-			Tips.hide();
-		});
-	}
-
-	
-
-	return {
-		init: function(){
-			resetTags();
-			bind();
-			Tips.init();
-		}
-	}
-});
+                if (offsetTop >= windowPageYOffset && offsetTop < windowPageYOffsetAddHeight + sensitivity) {
+                    that.render(++that.page, data);
+                }
+            })
+        }
+    }
+})
