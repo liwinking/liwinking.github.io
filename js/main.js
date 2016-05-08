@@ -106,5 +106,10 @@ require([], function (){
 	if(yiliaConfig.open_in_new == true){
 		$(".article a[href]").attr("target", "_blank")
 	}
+	if($(".instagram").length) {
+    require(['/js/photo.js', '/fancybox/jquery.fancybox.js', '/js/jquery.lazyload.js'], function(obj) {
+        obj.init();
+    });
+}
 	
 });
